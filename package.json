@@ -10,7 +10,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "test": "jest",
-    "chromatic": "npx chromatic"
+    "chromatic": "npx chromatic --project-token="
   },
   "dependencies": {
     "@emotion/react": "^11.9.3",
