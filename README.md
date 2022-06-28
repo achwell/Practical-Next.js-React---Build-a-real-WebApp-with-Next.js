@@ -21,3 +21,25 @@
 [Neumorphic Elements Codepen](https://codepen.io/nickovchinnikov/pen/OJOxaPg)
 
 [pull request](https://github.com/nickovchinnikov/coursesbox/pull/4)
+
+## React and Typescript Review
+
+### JSX at Glance
+
+### JSX compilation
+
+### Jest and React Testing Library
+
+[pull request](https://github.com/nickovchinnikov/coursesbox/pull/5)
+
+### Aliases, Fonts and Global styles
+
+[pull request](https://github.com/nickovchinnikov/coursesbox/pull/6)
+
+### Aliases and themes for Jest
+
+[pull request](https://github.com/nickovchinnikov/coursesbox/pull/7)
+
+### Storybook addon interactions
+
+[pull request](https://github.com/nickovchinnikov/coursesbox/pull/8)
