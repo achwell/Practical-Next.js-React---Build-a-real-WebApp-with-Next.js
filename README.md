@@ -1,5 +1,6 @@
 # Practical Guide to NextJS. Build eCommerce education app
 
+[Versel demo link](https://coursesbox-git-deploy-nickovchinnikov.vercel.app/)
 
 ## Intro
 
@@ -98,3 +99,32 @@
 ### Input component refactoring
 
 [pull request](https://github.com/nickovchinnikov/coursesbox/pull/20)
+
+## Pages and Routing
+
+### Create basic layout part 1
+### Create basic layout part 2
+
+[pull request](https://github.com/nickovchinnikov/coursesbox/pull/21)
+
+### Theme toggler
+
+[pull request](https://github.com/nickovchinnikov/coursesbox/pull/22)
+
+### Next Image and Course component
+### Course component refactoring
+
+[pull request](https://github.com/nickovchinnikov/coursesbox/pull/23)
+
+### Home page
+### Home page part 2
+
+[pull request](https://github.com/nickovchinnikov/coursesbox/pull/24)
+
+### Custom 404 error page
+
+[pull request](https://github.com/nickovchinnikov/coursesbox/pull/25)
+
+### Versel deploy
+
+[pull request](https://github.com/nickovchinnikov/coursesbox/pull/26)
