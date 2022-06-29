@@ -37,6 +37,7 @@ const VisiblePart = styled.label`
 `;
 
 export type Props = {
+  /** onChange callback */
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
 };
 
