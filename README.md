@@ -77,7 +77,7 @@
 
 [pull request](https://github.com/nickovchinnikov/coursesbox/pull/15)
 
-### IconButton component
+### Switch component
 
 [pull request](https://github.com/nickovchinnikov/coursesbox/pull/16)
 
@@ -90,3 +90,11 @@
 ### IconButton component
 
 [pull request](https://github.com/nickovchinnikov/coursesbox/pull/18)
+
+### Input component
+
+[pull request](https://github.com/nickovchinnikov/coursesbox/pull/19)
+
+### Input component refactoring
+
+[pull request](https://github.com/nickovchinnikov/coursesbox/pull/20)
