@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, FunctionComponent } from "react";
 import type { AppProps } from "next/app";
 import { ThemeProvider } from "@emotion/react";
 import { Themes } from "@/styles/themes";
@@ -9,10 +9,11 @@ function MyApp({ Component, pageProps }: AppProps) {
   const toggleDark = () => setIsDark(!isDark);
 
   const theme = Themes[isDark ? "dark" : "light"];
+  const C = Component as FunctionComponent;
   return (
     <ThemeProvider theme={theme}>
       <Layout isDark={isDark} onThemeToggle={toggleDark}>
-        <Component {...pageProps} />
+        <C {...pageProps} />
       </Layout>
     </ThemeProvider>
   );
