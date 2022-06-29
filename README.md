@@ -1,5 +1,6 @@
 # Practical Guide to NextJS. Build eCommerce education app
 
+
 ## Intro
 
 ### Create-next-app with Typescript support
@@ -22,6 +23,7 @@
 
 [pull request](https://github.com/nickovchinnikov/coursesbox/pull/4)
 
+
 ## React and Typescript Review
 
 ### JSX at Glance
@@ -43,3 +45,22 @@
 ### Storybook addon interactions
 
 [pull request](https://github.com/nickovchinnikov/coursesbox/pull/8)
+
+### Storybook addon a11y
+
+[pull request](https://github.com/nickovchinnikov/coursesbox/pull/9)
+
+### Visual testing and Chromatic
+
+[pull request](https://github.com/nickovchinnikov/coursesbox/pull/10)
+
+
+## Storybook and Components Library
+
+### Tile component
+
+[pull request](https://github.com/nickovchinnikov/coursesbox/pull/11)
+
+### Icon component
+
+[pull request](https://github.com/nickovchinnikov/coursesbox/pull/12)
