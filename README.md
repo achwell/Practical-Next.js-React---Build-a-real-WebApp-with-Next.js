@@ -136,3 +136,9 @@
 ### CI Test + Lint 
 
 [pull request](https://github.com/nickovchinnikov/coursesbox/pull/28)
+
+## Strapi review
+
+### Intro and refactoring
+
+[pull request](https://github.com/nickovchinnikov/coursesbox/pull/29)
