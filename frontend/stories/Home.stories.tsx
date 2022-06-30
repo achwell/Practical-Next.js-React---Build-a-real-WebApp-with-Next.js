@@ -1,4 +1,4 @@
-import Home from "@/pages/index";
+import Home from "@/pages";
 import { FunctionComponent } from "react";
 
 const HC = Home as FunctionComponent;

@@ -2,7 +2,7 @@ import { expect } from "@storybook/jest";
 import { screen } from "@storybook/testing-library";
 import { ComponentStoryObj, ComponentMeta } from "@storybook/react";
 
-import { Tile } from "@/components/Tile/Tile";
+import { Tile } from "./Tile";
 
 export default {
   title: "Content/Tile",
@@ -45,3 +45,12 @@ export const BasicTile: ComponentStoryObj<typeof Tile> = {
     culpa qui officia deserunt mollit anim id est laborum.`,
   },
 };
+
+export const BasicTileWithSmallAmountOfContent: ComponentStoryObj<typeof Tile> =
+  {
+    ...BasicTile,
+    args: {
+      header: "Lorem ipsum dolor sit amet",
+      children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    },
+  };

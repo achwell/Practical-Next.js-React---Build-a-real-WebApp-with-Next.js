@@ -8,32 +8,33 @@ import { Feedback } from "./Feedback";
 export default {
   title: "Controls/Input",
   component: Input,
-  args: {
-    placeholder: "Your name",
-    label: "Name:",
-  },
+  args: {},
 } as ComponentMeta<typeof Input>;
 
 export const PrimaryInput: ComponentStoryObj<typeof Input> = {
   play: async ({ args }) => {
     await userEvent.type(screen.getByRole("textbox"), "String");
     // @todo: https://github.com/storybookjs/storybook/issues/16941
-    //  await expect(args.onChange).toHaveBeenCalledTimes(6);
+    // await expect(args.onChange).toHaveBeenCalledTimes(6);
   },
   args: {
-    feedback: "Looks cool!",
+    placeholder: "Your name",
+    label: "Name:",
   },
 };
 
 export const WithIcon: ComponentStoryObj<typeof Input> = {
   args: {
     icon: "Search",
+    placeholder: "Search",
+    height: 4,
   },
 };
 
-export const WithValidFeedback: ComponentStoryObj<typeof Input> = {
+export const WithInvalidFeedback: ComponentStoryObj<typeof Input> = {
   args: {
-    feedback: <Feedback isValid={true}>Looks good!</Feedback>,
+    placeholder: "Some text",
+    feedback: <Feedback isValid={false}>Required!</Feedback>,
   },
   argTypes: {
     feedback: {
@@ -42,9 +43,11 @@ export const WithValidFeedback: ComponentStoryObj<typeof Input> = {
   },
 };
 
-export const WithInvalidFeedback: ComponentStoryObj<typeof Input> = {
+export const WithValidFeedback: ComponentStoryObj<typeof Input> = {
   args: {
-    feedback: <Feedback isValid={false}>Required!</Feedback>,
+    placeholder: "Some text",
+    label: "Text:",
+    feedback: <Feedback isValid={true}>Looks good!</Feedback>,
   },
   argTypes: {
     feedback: {

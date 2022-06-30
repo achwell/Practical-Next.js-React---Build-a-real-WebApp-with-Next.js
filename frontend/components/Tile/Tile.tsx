@@ -1,14 +1,10 @@
-import { FC, PropsWithChildren } from "react";
+import { FC, ReactChild } from "react";
 import styled from "@emotion/styled";
-import { borderRadius, boxShadow } from "@/components/styles";
 
-type Props = {
-  /** Header string */
-  header: string;
-};
+import { boxShadow, borderRadius } from "@/components/styles";
 
 const Section = styled.section`
-  ${borderRadius}
+  ${borderRadius};
   padding: 1vmin 4vmin 4vmin;
   background: ${({ theme }) => theme.background};
   color: ${({ theme }) => theme.font.regular};
@@ -16,8 +12,13 @@ const Section = styled.section`
     boxShadow(theme.components.shadow1, theme.components.shadow2)}
 `;
 
-export const Tile: FC<PropsWithChildren<Props>> = ({ header, children }) => (
-  <Section>
+export type Props = {
+  /** Header */
+  header: ReactChild;
+};
+
+export const Tile: FC<Props> = ({ header, children, ...rest }) => (
+  <Section {...rest}>
     <h2>{header}</h2>
     {children}
   </Section>

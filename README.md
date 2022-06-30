@@ -100,7 +100,8 @@
 
 [pull request](https://github.com/nickovchinnikov/coursesbox/pull/20)
 
-## Pages and Routing
+
+## Basic layout and pages
 
 ### Create basic layout part 1
 ### Create basic layout part 2
@@ -133,11 +134,12 @@
 
 [pull request](https://github.com/nickovchinnikov/coursesbox/pull/27)
 
-### CI Test + Lint 
+### CI Test + Lint
 
 [pull request](https://github.com/nickovchinnikov/coursesbox/pull/28)
 
-## Strapi review
+
+## Login and Registration
 
 ### Intro and refactoring
 
@@ -146,3 +148,31 @@
 ### Strapi init
 
 [pull request](https://github.com/nickovchinnikov/coursesbox/pull/30)
+
+### User, roles and auth flow
+
+### Login page part 1
+
+### Login page part 2
+
+[pull request](https://github.com/nickovchinnikov/coursesbox/pull/31)
+
+### React hook form and login
+
+### React hook form, validation and tests
+
+[pull request](https://github.com/nickovchinnikov/coursesbox/pull/32)
+
+### Fix styles, add login button
+
+### Theme toggle flicker fix
+
+[pull request](https://github.com/nickovchinnikov/coursesbox/pull/33)
+
+### Registration page
+
+[pull request](https://github.com/nickovchinnikov/coursesbox/pull/34)
+
+### User Page and review
+
+[pull request](https://github.com/nickovchinnikov/coursesbox/pull/35)
