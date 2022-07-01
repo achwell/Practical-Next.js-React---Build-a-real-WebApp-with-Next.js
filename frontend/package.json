@@ -47,9 +47,11 @@
     "eslint-plugin-storybook": "^0.5.13",
     "jest": "^28.1.2",
     "jest-environment-jsdom": "^28.1.2",
+    "msw": "^0.42.3",
     "prettier": "2.7.1",
     "tsconfig-paths-webpack-plugin": "^3.5.2",
-    "typescript": "4.7.4"
+    "typescript": "4.7.4",
+    "whatwg-fetch": "^3.6.2"
   },
   "readme": "../README.md",
   "_id": "coursesbox@0.1.0"
