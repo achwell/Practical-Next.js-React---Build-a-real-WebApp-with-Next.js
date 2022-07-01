@@ -1,5 +1,5 @@
 import { FunctionComponent } from "react";
-import { render, screen, act } from "@/test-utils";
+import { render, screen } from "@/test-utils";
 import userEvent from "@testing-library/user-event";
 
 import Registration from "@/pages/registration";
@@ -54,13 +54,11 @@ describe("Registration page", () => {
       screen.getByText("Only letters, numbers and spaces!")
     ).toBeInTheDocument();
 
-    await act(async () => {
-      const usernameInput = screen.getByRole("textbox", {
-        name: "username Only letters, numbers and spaces!",
-      });
-      userEvent.clear(usernameInput);
-      userEvent.type(usernameInput, "testtesttest");
+    const usernameInput = await screen.getByRole("textbox", {
+      name: "username Only letters, numbers and spaces!",
     });
+    await userEvent.clear(usernameInput);
+    await userEvent.type(usernameInput, "testtesttest");
 
     const alerts = screen.getAllByRole("alert");
 

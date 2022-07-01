@@ -5,11 +5,7 @@ exports[`Registration page Client validation check 1`] = `
   class="css-1reg724"
   role="alert"
 >
-  <span
-    class="css-sk8pyf"
-  >
-    Required field!
-  </span>
+   
 </span>
 `;
 
