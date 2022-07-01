@@ -1,10 +1,10 @@
-import { FC, ReactElement } from "react";
+import { FC, PropsWithChildren, ReactElement } from "react";
 import { render, RenderOptions } from "@testing-library/react";
 import { ThemeProvider } from "@emotion/react";
 
 import { Themes } from "./styles/themes";
 
-const Wrapper: FC = ({ children }) => (
+const Wrapper: FC<PropsWithChildren> = ({ children }) => (
   <ThemeProvider theme={Themes.light}>{children}</ThemeProvider>
 );
 
