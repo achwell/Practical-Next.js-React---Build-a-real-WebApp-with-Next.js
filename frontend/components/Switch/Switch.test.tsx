@@ -13,14 +13,14 @@ describe("Switch test cases", () => {
 
     expect(asFragment()).toMatchSnapshot();
   });
-  it("Check onChange callback", async () => {
+  it("Check onChange callback", () => {
     const onChange = jest.fn();
 
     render(<Switch onChange={onChange} />);
 
     const element = screen.getByTestId("SwitchVisiblePart");
 
-    await userEvent.click(element);
+    userEvent.click(element);
 
     expect(onChange).toHaveBeenCalled();
   });

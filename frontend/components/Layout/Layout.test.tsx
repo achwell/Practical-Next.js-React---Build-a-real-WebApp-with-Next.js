@@ -1,4 +1,4 @@
-import { render, screen } from "@/test-utils";
+import { render, screen, act } from "@/test-utils";
 import userEvent from "@testing-library/user-event";
 
 import { Layout } from "./Layout";
@@ -29,7 +29,9 @@ describe("Layout test cases", () => {
     const themeToggler = screen.getByRole("button", { name: "Moon" });
     expect(themeToggler).toBeInTheDocument();
 
-    await userEvent.click(themeToggler);
+    await act(async () => {
+      userEvent.click(themeToggler);
+    });
 
     expect(localStorage.getItem("theme")).toBe("dark");
     expect(screen.getByRole("button", { name: "Sun" })).toBeInTheDocument();

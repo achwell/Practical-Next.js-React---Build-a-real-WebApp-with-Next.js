@@ -1,11 +1,15 @@
-import Login from "@/pages/login";
-import { FunctionComponent } from "react";
+import { Provider } from "react-redux";
 
-const LC = Login as FunctionComponent;
+import { store } from "@/store";
+import Login from "@/pages/login";
 
 export default {
   title: "Pages/Login",
-  component: LC,
+  component: Login,
 };
 
-export const LoginPage = () => <LC />;
+export const LoginPage = () => (
+  <Provider store={store}>
+    <Login />
+  </Provider>
+);

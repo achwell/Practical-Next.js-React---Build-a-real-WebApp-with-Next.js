@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, PropsWithChildren } from "react";
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 
@@ -14,12 +14,16 @@ const Wrapper = styled.div`
   ${CommonStyles};
 `;
 
-const StyledTile = styled(Tile)`
+const StyledTile: FC<PropsWithChildren<Props>> = styled(Tile)`
   ${CommonStyles};
   flex-flow: column;
 `;
 
-export const CenteredTile: FC<Props> = ({ children, header, ...rest }) => (
+export const CenteredTile: FC<PropsWithChildren<Props>> = ({
+  children,
+  header,
+  ...rest
+}) => (
   <Wrapper {...rest}>
     <StyledTile header={header}>{children}</StyledTile>
   </Wrapper>

@@ -1,11 +1,15 @@
-import { FunctionComponent } from "react";
-import Registration from "@/pages/registration";
+import { Provider } from "react-redux";
 
-const RC = Registration as FunctionComponent;
+import { store } from "@/store";
+import Registration from "@/pages/registration";
 
 export default {
   title: "Pages/Registration",
-  component: RC,
+  component: Registration,
 };
 
-export const RegistrationPage = () => <RC />;
+export const RegistrationPage = () => (
+  <Provider store={store}>
+    <Registration />
+  </Provider>
+);

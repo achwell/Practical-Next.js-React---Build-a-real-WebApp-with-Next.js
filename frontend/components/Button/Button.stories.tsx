@@ -1,6 +1,6 @@
 import { ComponentStoryObj, ComponentMeta } from "@storybook/react";
-import { expect } from "@storybook/jest";
 import { screen, userEvent } from "@storybook/testing-library";
+
 import { Button } from "./Button";
 
 export default {
@@ -28,12 +28,14 @@ export const SecondaryButton: ComponentStoryObj<typeof Button> = {
     color: "secondary",
   },
 };
+
 export const WarningButton: ComponentStoryObj<typeof Button> = {
   ...PrimaryButton,
   args: {
     color: "warning",
   },
 };
+
 export const DangerButton: ComponentStoryObj<typeof Button> = {
   ...PrimaryButton,
   args: {

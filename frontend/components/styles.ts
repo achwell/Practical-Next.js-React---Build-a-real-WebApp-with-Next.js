@@ -14,11 +14,11 @@ export const boxShadow = (
   `;
 };
 
+export const borderRadius = css`
+  border-radius: 1rem;
+`;
+
 export const transition = () =>
   css`
     transition: all 0.4s ease;
   `;
-
-export const borderRadius = css`
-  border-radius: 1rem;
-`;

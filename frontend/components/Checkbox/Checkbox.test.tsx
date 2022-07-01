@@ -13,14 +13,14 @@ describe("Checkbox test cases", () => {
 
     expect(asFragment()).toMatchSnapshot();
   });
-  it("Check onChange callback", async () => {
+  it("Check onChange callback", () => {
     const onChange = jest.fn();
 
     render(<Checkbox onChange={onChange} />);
 
     const element = screen.getByText("✔");
 
-    await userEvent.click(element);
+    userEvent.click(element);
 
     expect(onChange).toHaveBeenCalled();
   });

@@ -1,7 +1,10 @@
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 
-export type Props = { size?: number };
+export type Props = {
+  /** Logo size in rem */
+  size?: number;
+};
 
 export const Logo = styled.header<Props>`
   font-family: Monoton;
