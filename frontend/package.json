@@ -15,6 +15,7 @@
   "dependencies": {
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
+    "@reduxjs/toolkit": "^1.8.3",
     "next": "12.2.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
@@ -39,16 +40,17 @@
     "@types/node": "18.0.0",
     "@types/react": "17.0.39",
     "babel-loader": "^8.2.5",
-    "chromatic": "^6.6.4",
+    "chromatic": "^6.7.0",
     "eslint": "8.18.0",
     "eslint-config-next": "12.2.0",
-    "eslint-plugin-prettier": "^4.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-storybook": "^0.5.13",
     "jest": "^27.5.1",
+    "jest-environment-jsdom": "^27.5.1",
     "prettier": "2.7.1",
     "tsconfig-paths-webpack-plugin": "^3.5.2",
     "typescript": "4.7.4"
   },
-  "readme": "ERROR: No README data found!",
+  "readme": "../README.md",
   "_id": "coursesbox@0.1.0"
 }

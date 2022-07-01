@@ -176,3 +176,13 @@
 ### User Page and review
 
 [pull request](https://github.com/nickovchinnikov/coursesbox/pull/35)
+
+## Auth flow and Redux
+
+### Update deps
+
+[pull request](https://github.com/nickovchinnikov/coursesbox/pull/36)
+
+### State management and Redux-Toolkit
+
+[pull request](https://github.com/nickovchinnikov/coursesbox/pull/37)
