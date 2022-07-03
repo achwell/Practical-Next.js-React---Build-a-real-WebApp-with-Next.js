@@ -1,17 +1,43 @@
-import type { NextPage } from "next";
+import type { NextPage, GetStaticProps } from "next";
 import Head from "next/head";
-import styled from "@emotion/styled";
 
-import { Course } from "@/components/Course";
+import { Course as CourseType, Response } from "@/types";
+import { Courses } from "@/components/Course";
 
-const CoursesWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2vw;
-  margin: 2vh 1vw;
-`;
+type CoursesResponce = Response<CourseType[]>;
 
-const Home: NextPage = () => {
+export const getStaticProps: GetStaticProps = async () => {
+  const api_url = process.env.NEXT_PUBLIC_STRAPI_API_URL;
+
+  const response = await fetch(`${api_url}/courses?populate=*`, {
+    method: "GET",
+  });
+
+  const { data: courses, meta, error }: CoursesResponce = await response.json();
+
+  const status = error?.status;
+
+  if (status && (status < 200 || status >= 300)) {
+    return {
+      props: {
+        courses: [],
+        meta: {},
+      },
+    };
+  }
+  return {
+    props: {
+      courses,
+      meta,
+    },
+  };
+};
+
+const strapi_url = process.env.NEXT_PUBLIC_STRAPI_URL;
+
+const Home: NextPage<{
+  courses: CourseType[];
+}> = ({ courses }) => {
   return (
     <>
       <Head>
@@ -19,37 +45,7 @@ const Home: NextPage = () => {
         <meta name="description" content="IT courses for everyone" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <CoursesWrapper>
-        {Array(4)
-          .fill("")
-          .map(() => (
-            <Course
-              key={Math.random()}
-              header="Hands-On React. Build advanced React JS Frontend with expert"
-              link="/hands-on-reactjs"
-              imageProps={{
-                width: 1368,
-                height: 770,
-                alt: "Logo for Hands-On React",
-                src: "/covers/hands-on_reactjs_cover.png",
-              }}
-            >
-              <>
-                React is the most popular library for building frontend web
-                applications. Step-by-step by diving into all the basics,
-                I&apos;ll introduce you to advanced concepts as well. We&apos;ll
-                build the minesweeper application from scratch We&apos;ll build
-                the minesweeper application from scratch:
-                <ul>
-                  <li>setup of the development environment</li>
-                  <li>configuration of the React JS app</li>
-                  <li>basic algorithms of Minesweeper</li>
-                </ul>
-              </>
-            </Course>
-          ))}
-      </CoursesWrapper>
+      <Courses courses={courses} strapi_url={String(strapi_url)} />
     </>
   );
 };

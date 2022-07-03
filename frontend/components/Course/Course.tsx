@@ -2,6 +2,7 @@ import { FC, PropsWithChildren } from "react";
 import styled from "@emotion/styled";
 import Image, { ImageProps } from "next/image";
 import Link from "next/link";
+import { Course as CourseType } from "@/types";
 import { boxShadow, borderRadius } from "@/components/styles";
 import { StyledLink } from "@/components/StyledLink";
 
@@ -10,19 +11,21 @@ const Section = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  justify-content: space-between;
+  padding: 2vmin;
   background: ${({ theme }) => theme.background};
   color: ${({ theme }) => theme.font.regular};
   ${borderRadius};
   ${({ theme }) =>
     boxShadow(theme.components.shadow1, theme.components.shadow2)};
+`;
+
+const CourseLink = styled(StyledLink)`
+  display: flex;
   width: 94vw;
   @media (min-width: 900px) {
     width: 46vw;
   }
-`;
-
-const CourseLink = styled(StyledLink)`
-  padding: 1vmin 4vmin;
 `;
 
 export type Props = {
@@ -40,13 +43,60 @@ export const Course: FC<PropsWithChildren<Props>> = ({
   link,
   imageProps,
 }) => (
-  <Section>
-    <Link href={link} passHref>
-      <CourseLink>
+  <Link href={link} passHref>
+    <CourseLink>
+      <Section>
         <h2>{header}</h2>
         <Image {...imageProps} alt={header} />
         {children}
-      </CourseLink>
-    </Link>
-  </Section>
+      </Section>
+    </CourseLink>
+  </Link>
+);
+
+export const Wrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vw;
+  margin: 2vh 1vw;
+`;
+
+export const Courses: FC<{ courses: CourseType[]; strapi_url: string }> = ({
+  courses,
+  strapi_url,
+}) => (
+  <Wrapper>
+    {courses?.map(
+      ({
+        id,
+        attributes: {
+          header,
+          subtitle,
+          publishedAt,
+          cover: {
+            data: {
+              attributes: { url, width, height },
+            },
+          },
+        },
+      }) => (
+        <Course
+          key={id}
+          header={header}
+          link={`/course/${id}`}
+          imageProps={{
+            width,
+            height,
+            alt: `Cover for ${header}`,
+            src: `${strapi_url}${url}`,
+          }}
+        >
+          <h3>{subtitle}</h3>
+          <time dateTime={publishedAt}>
+            {new Date(publishedAt).toDateString()}
+          </time>
+        </Course>
+      )
+    )}
+  </Wrapper>
 );

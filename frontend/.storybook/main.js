@@ -13,7 +13,12 @@ module.exports = {
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
     "@storybook/addon-a11y",
+    "storybook-addon-next-router",
   ],
+  env: (config) => ({
+    ...config,
+    NEXT_PUBLIC_STRAPI_URL: "",
+  }),
   webpackFinal: async (config) => {
     config.resolve.plugins = [
       ...(config.resolve.plugins || []),

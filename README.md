@@ -222,3 +222,27 @@
 ### Upgrade Strapi
 
 [pull request](https://github.com/nickovchinnikov/coursesbox/pull/44)
+
+### Add courses endpoint with data
+
+### SSG, getStaticProps and index page
+
+### Fix tests and storybook
+
+### Review deploy with docker and AWS
+
+### Fix deploy problem
+
+[pull request](https://github.com/nickovchinnikov/coursesbox/pull/45)
+
+### Course page, SSG and getStaticPath
+
+[pull request](https://github.com/nickovchinnikov/coursesbox/pull/46)
+
+### Search input behavior
+
+### Search courses
+
+### SSR + getServerSideProps
+
+[pull request](https://github.com/nickovchinnikov/coursesbox/pull/47)

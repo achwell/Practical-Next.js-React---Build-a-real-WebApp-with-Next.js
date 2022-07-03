@@ -44,5 +44,6 @@ yarn-error.log*
 # intellij
 /.idea
 
-/storybook-static/
+# Storybook
+storybook-static
 build-storybook.log
